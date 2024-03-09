@@ -1,10 +1,16 @@
-import { Preface } from "@/components/Preface"
-import { Book } from "@/components/Book"
+import { BookCover } from "@/components/BookCover";
+import { Right } from "@/components/Right";
+import { Left } from "@/components/Left";
+import { recursive } from "@/app/layout";
+
 export default function Home() {
   return (
     <div className="wrapper">
-    <Preface/>
-    <Book/>
+      <BookCover />
+      <div className={`book ${recursive.className}`}>
+        <Left />
+        <Right />
+      </div>
     </div>
   );
 }

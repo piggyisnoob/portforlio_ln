@@ -20,6 +20,9 @@ const config: Config = {
       borderRadius: {
         "lg-6": "0.6rem", 
       },
+      variants: {
+        image: ['responsive'],
+      },
     },
   },
   plugins: [],
