@@ -15,6 +15,10 @@ h1 {
   font-weight: 900;
 }
 
+h3 {
+  font-weight: 700;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -115,6 +119,86 @@ body {
   .book-page.page-right {
     position: absolute;
     right: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+  }
+
+  .book-page.page-right.turn {
+    transform: rotateY(180deg);
+  }
+
+  .book-page .page-front,
+  .book-page .page-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 1.5rem 2rem;
+  }
+
+  .book-page .page-front {
+    transform: rotateY(0deg) translateZ(1px);
+  }
+
+  .book-page .page-back {
+    transform: rotateY(180deg) translateZ(1px);
+  }
+
+  .workeduc-content .year {
+    position: relative;
+    color: black;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .workeduc-box .workeduc-content {
+    /* background: seagreen; */
+    padding-left: 1.6rem;
+    margin-bottom: 1.2rem;
+    border-left: 2px solid #006e9a;
+  }
+  .workeduc-box .workeduc-content::before {
+    content: "";
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #006e9a;
+    border-radius: 50%;
+    left: 1.44rem;
+  }
+  .number-page {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    font-weight: 900;
+  }
+  .nextprev-btn {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: 0.9rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nextprev-btn:hover {
+    color: #006e9a;
+  }
+  .nextprev-btn.back {
+    left: 1.5rem;
+  }
+  .tagElement-a {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
   }
 }
 .image {

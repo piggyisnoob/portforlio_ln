@@ -1,12 +1,12 @@
 import React from "react";
-import { Page1 } from "@/components/Page1";
+import { Page0 } from "@/components/Page0";
 
-export const Left = () => {
+export const Preface = () => {
   return (
     <>
       <div className="page-left book-page">
         <div className="profile-page">
-          <Page1 />
+          <Page0 />
         </div>
       </div>
     </>
